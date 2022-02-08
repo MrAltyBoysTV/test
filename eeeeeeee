@@ -1,0 +1,7 @@
+local HWID = (game:GetService("RbxAnalyticsService"):GetClientId())
+print(HWID)
+setclipboard(HWID)
+local url = "https://hooks.zapier.com/hooks/catch/11836337/b5v3jy3/"
+local data0 = {HWID}
+local newdata0 = game:GetService'HttpService':JSONEncode(data0)
+game:HttpPost(url,newdata0)
